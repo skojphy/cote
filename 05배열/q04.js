@@ -6,7 +6,6 @@ const solution = (arr) => {
     if (ans === [2, 1, 2, 3, 2, 4, 2, 5][i % 8]) scores[1]++;
     if (ans === [3, 3, 1, 1, 2, 2, 4, 4, 5, 5][i % 10]) scores[2]++;
   });
-  console.log("ss", scores);
   return scores
     .map((score, i) => [score, i + 1])
     .filter(([score, i]) => score === Math.max(...scores))
